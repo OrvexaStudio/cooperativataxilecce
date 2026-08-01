@@ -828,3 +828,379 @@ footer{
 
 
 }
+
+/* ===============================
+   TRANSFER PAGE
+================================ */
+
+
+/* HEADER PAGINA */
+
+.page-header{
+
+    min-height:85vh;
+
+    color:white;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,.82),
+    rgba(0,0,0,.35)
+    ),
+    url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05")
+    center/cover;
+
+}
+
+
+.transfer-header{
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.45)
+    ),
+    url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05")
+    center/cover;
+
+}
+
+
+
+.page-hero{
+
+    min-height:85vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:140px 7% 80px;
+
+    max-width:900px;
+
+}
+
+
+
+.page-hero h1{
+
+    font-size:75px;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    margin:20px 0;
+
+}
+
+
+
+.page-hero p:not(.overline){
+
+    max-width:650px;
+
+    font-size:20px;
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+
+/* INTRO TRANSFER */
+
+
+.airport-intro{
+
+    padding:120px 7%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+
+
+.airport-intro h2{
+
+    font-size:65px;
+
+    line-height:1.05;
+
+}
+
+
+
+.airport-intro p:last-child{
+
+    color:var(--gray);
+
+    font-size:20px;
+
+    line-height:1.9;
+
+}
+
+
+
+
+
+
+/* CARD AEROPORTI */
+
+
+.airports{
+
+    padding:0 7% 120px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:35px;
+
+}
+
+
+
+.airport-card{
+
+    background:#111;
+
+    color:white;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    transition:.4s;
+
+}
+
+
+
+.airport-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.airport-card h3{
+
+    color:var(--orange);
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.airport-card p{
+
+    color:#ccc;
+
+    line-height:1.7;
+
+}
+
+
+
+.airport-card ul{
+
+    list-style:none;
+
+    margin:30px 0;
+
+}
+
+
+
+.airport-card li{
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+
+    color:#ddd;
+
+}
+
+
+
+.airport-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:15px 30px;
+
+    background:var(--orange);
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+/* FOTO CENTRALE */
+
+
+.transfer-image{
+
+    height:650px;
+
+    margin:0 7% 120px;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:70px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+    ),
+
+    url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2")
+    center/cover;
+
+}
+
+
+
+.transfer-image h2{
+
+    font-size:70px;
+
+    line-height:1;
+
+    max-width:650px;
+
+}
+
+
+
+.transfer-image p{
+
+    margin-top:25px;
+
+    max-width:500px;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+
+
+/* MOBILE TRANSFER */
+
+
+@media(max-width:900px){
+
+
+.page-hero h1{
+
+    font-size:48px;
+
+}
+
+
+
+.airport-intro{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.airport-intro h2{
+
+    font-size:45px;
+
+}
+
+
+
+.airports{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.airport-card{
+
+    padding:35px;
+
+}
+
+
+
+.transfer-image{
+
+    height:500px;
+
+    padding:35px;
+
+}
+
+
+
+.transfer-image h2{
+
+    font-size:45px;
+
+}
+
+
+
+}
