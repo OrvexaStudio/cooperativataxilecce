@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+    <loc>https://www.cooperativataxilecce.it/</loc>
+    <priority>1.0</priority>
+</url>
+
+<url>
+    <loc>https://www.cooperativataxilecce.it/servizi.html</loc>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://www.cooperativataxilecce.it/transfer.html</loc>
+    <priority>0.9</priority>
+</url>
+
+<url>
+    <loc>https://www.cooperativataxilecce.it/salento.html</loc>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://www.cooperativataxilecce.it/chi-siamo.html</loc>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://www.cooperativataxilecce.it/contatti.html</loc>
+    <priority>0.9</priority>
+</url>
+
+</urlset>
