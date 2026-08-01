@@ -2259,3 +2259,281 @@ footer{
 
 
 }
+
+/* =================================
+   CONTATTI PAGE
+================================= */
+
+
+/* HERO */
+
+.contact-header{
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.4)
+    ),
+    url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000")
+    center/cover;
+
+}
+
+
+
+
+
+
+
+/* LAYOUT CONTATTI */
+
+
+.contact-layout{
+
+    padding:120px 7%;
+
+    display:grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap:80px;
+
+    align-items:start;
+
+}
+
+
+
+
+
+.contact-info h2{
+
+    font-size:60px;
+
+    line-height:1.05;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.contact-info > p:not(.section-label){
+
+    color:var(--gray);
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+
+
+
+
+
+
+/* BOX INFORMAZIONI */
+
+
+.info-box{
+
+    padding:25px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+
+.info-box h3{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.info-box p{
+
+    color:var(--gray);
+
+}
+
+
+
+
+
+
+
+
+/* FORM */
+
+
+.contact-form{
+
+    background:#111;
+
+    padding:55px;
+
+    border-radius:35px;
+
+    color:white;
+
+}
+
+
+
+.contact-form h2{
+
+    font-size:45px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+
+    background:white;
+
+}
+
+
+
+.contact-form button{
+
+    background:var(--orange);
+
+}
+
+
+
+.contact-form button:hover{
+
+    background:#c85e0d;
+
+}
+
+
+
+
+
+
+
+
+/* MAPPA */
+
+.map-section{
+
+    margin:0 7% 120px;
+
+    height:350px;
+
+    border-radius:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.65)
+    ),
+
+    url("https://images.unsplash.com/photo-1524661135-423995f22d0b")
+    center/cover;
+
+}
+
+
+
+.map-section h2{
+
+    font-size:45px;
+
+}
+
+
+
+.map-section p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    color:#ddd;
+
+}
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+
+.contact-layout{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.contact-info h2{
+
+    font-size:45px;
+
+}
+
+
+
+.contact-form{
+
+    padding:35px 25px;
+
+}
+
+
+
+.contact-form h2{
+
+    font-size:35px;
+
+}
+
+
+
+.map-section h2{
+
+    font-size:35px;
+
+}
+
+
+
+}
