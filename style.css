@@ -1534,3 +1534,373 @@ footer{
 
 
 }
+
+
+/* =================================
+   SALENTO PAGE
+================================= */
+
+
+/* HERO SALENTO */
+
+.salento-header{
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.35)
+    ),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+    center/cover;
+
+}
+
+
+
+
+
+
+/* INTRO */
+
+.salento-intro{
+
+    padding:120px 7%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+
+
+.salento-intro h2{
+
+    font-size:75px;
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+}
+
+
+
+.salento-intro p:last-child{
+
+    color:var(--gray);
+
+    font-size:21px;
+
+    line-height:1.9;
+
+}
+
+
+
+
+
+
+
+
+/* DESTINAZIONI */
+
+
+.destinations{
+
+    padding:0 7% 120px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+
+
+.destinations article{
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    background:#111;
+
+    color:white;
+
+    position:relative;
+
+}
+
+
+
+.destinations img{
+
+    width:100%;
+
+    height:380px;
+
+    object-fit:cover;
+
+    opacity:.75;
+
+}
+
+
+
+.destinations div{
+
+    padding:35px;
+
+}
+
+
+
+.destinations h3{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.destinations p{
+
+    color:#ccc;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.destinations a{
+
+    color:var(--orange-light);
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+
+
+/* TOUR PRIVATO */
+
+
+.private-tour{
+
+    margin:0 7% 120px;
+
+    min-height:600px;
+
+    border-radius:40px;
+
+    padding:80px;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,.8),
+    rgba(0,0,0,.3)
+    ),
+
+    url("https://images.unsplash.com/photo-1533105079780-92b9be482077")
+    center/cover;
+
+}
+
+
+
+.private-tour h2{
+
+    font-size:65px;
+
+    line-height:1.05;
+
+    max-width:700px;
+
+}
+
+
+
+.private-tour p:not(.section-label){
+
+    max-width:600px;
+
+    margin:30px 0;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#ddd;
+
+}
+
+
+
+.private-tour a{
+
+    display:inline-block;
+
+    background:var(--orange);
+
+    padding:18px 35px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+
+/* CTA */
+
+.salento-cta{
+
+    padding:100px 7%;
+
+    text-align:center;
+
+    background:var(--light);
+
+}
+
+
+
+.salento-cta h2{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.salento-cta p{
+
+    font-size:22px;
+
+    color:var(--gray);
+
+    margin-bottom:40px;
+
+}
+
+
+
+.salento-cta a{
+
+    display:inline-block;
+
+    padding:18px 40px;
+
+    background:var(--orange);
+
+    color:white;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+
+.salento-intro{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.salento-intro h2{
+
+    font-size:50px;
+
+}
+
+
+
+.destinations{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.destinations img{
+
+    height:280px;
+
+}
+
+
+
+.private-tour{
+
+    padding:40px;
+
+}
+
+
+
+.private-tour h2{
+
+    font-size:45px;
+
+}
+
+
+
+.salento-cta h2{
+
+    font-size:45px;
+
+}
+
+
+
+}
