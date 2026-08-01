@@ -1,44 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-// ===============================
+// =================================
 // PRENOTAZIONE WHATSAPP
-// ===============================
+// =================================
 
 
-const form = document.getElementById("bookingForm");
+const forms = document.querySelectorAll("#bookingForm");
 
 
-if(form){
+forms.forEach(form => {
+
 
 form.addEventListener("submit", function(e){
 
 e.preventDefault();
 
 
-const nome = document.getElementById("nome").value;
+const nome = document.getElementById("nome")?.value || "";
 
-const telefono = document.getElementById("telefono").value;
+const telefono = document.getElementById("telefono")?.value || "";
 
-const data = document.getElementById("data").value;
+const data = document.getElementById("data")?.value || "";
 
-const passeggeri = document.getElementById("passeggeri").value;
+const passeggeri = document.getElementById("passeggeri")?.value || "";
 
-const partenza = document.getElementById("partenza").value;
+const partenza = document.getElementById("partenza")?.value || "";
 
-const destinazione = document.getElementById("destinazione").value;
+const destinazione = document.getElementById("destinazione")?.value || "";
 
-const note = document.getElementById("note").value;
+const note = document.getElementById("note")?.value || "Nessuna";
 
 
 
-const messaggio = `
+const messaggio = 
+`Buongiorno Cooperativa Taxi Lecce,
 
-Buongiorno Cooperativa Taxi Lecce,
+vorrei prenotare una corsa.
 
-vorrei richiedere una prenotazione.
-
-Nome e Cognome:
+Nome:
 ${nome}
 
 Telefono:
@@ -57,57 +57,130 @@ Destinazione:
 ${destinazione}
 
 Note:
-${note || "Nessuna"}
+${note}
 
-Grazie.
-
-`;
+Grazie.`;
 
 
 
-const numeroWhatsApp = "393286714428";
+const numero = "393286714428";
 
 
-const url = 
+const whatsappURL =
 "https://wa.me/" 
-+ numeroWhatsApp 
++ numero 
 + "?text=" 
 + encodeURIComponent(messaggio);
 
 
 
-window.open(url, "_blank");
+window.open(whatsappURL, "_blank");
 
 
 });
+
+
+});
+
+
+
+
+
+
+
+
+// =================================
+// PULSANTE WHATSAPP FISSO
+// =================================
+
+
+const whatsappButton = document.createElement("a");
+
+
+whatsappButton.href =
+"https://wa.me/393286714428";
+
+
+whatsappButton.target="_blank";
+
+
+whatsappButton.className =
+"floating-whatsapp";
+
+
+whatsappButton.innerHTML =
+"WhatsApp";
+
+
+
+document.body.appendChild(whatsappButton);
+
+
+
+
+
+
+
+
+// =================================
+// NAVBAR SCROLL
+// =================================
+
+
+const nav = document.querySelector("nav");
+
+
+window.addEventListener("scroll",()=>{
+
+
+if(!nav) return;
+
+
+if(window.scrollY > 60){
+
+
+nav.classList.add("nav-scroll");
+
+
+}else{
+
+
+nav.classList.remove("nav-scroll");
+
 
 }
 
 
+});
 
 
 
 
-// ===============================
-// ANIMAZIONI SCROLL
-// ===============================
 
 
-const elements = document.querySelectorAll(
-".intro, .booking, .service-grid article, .transfer-banner, .numbers div"
+
+
+// =================================
+// ANIMAZIONI
+// =================================
+
+
+const animatedElements =
+document.querySelectorAll(
+".intro, .booking, .service-grid article, .service-list article, .airport-card, .destinations article, .values-company div"
 );
 
 
 
-elements.forEach(element => {
+animatedElements.forEach(el=>{
 
-element.classList.add("hidden");
+el.classList.add("reveal");
 
 });
 
 
 
-const observer = new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver(entries=>{
 
 
 entries.forEach(entry=>{
@@ -115,7 +188,7 @@ entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.classList.add("show");
+entry.target.classList.add("active");
 
 observer.unobserve(entry.target);
 
@@ -126,53 +199,14 @@ observer.unobserve(entry.target);
 
 
 },{
-threshold:0.15
+threshold:.15
 });
 
 
 
-elements.forEach(element=>{
+animatedElements.forEach(el=>{
 
-observer.observe(element);
-
-});
-
-
-
-
-
-
-
-
-// ===============================
-// NAVBAR CAMBIO COLORE SCROLL
-// ===============================
-
-
-const nav = document.querySelector("nav");
-
-
-window.addEventListener("scroll", ()=>{
-
-
-if(window.scrollY > 80){
-
-nav.style.background =
-"rgba(11,11,11,0.92)";
-
-nav.style.backdropFilter =
-"blur(15px)";
-
-
-}else{
-
-
-nav.style.background =
-"transparent";
-
-
-}
-
+observer.observe(el);
 
 });
 
@@ -183,65 +217,21 @@ nav.style.background =
 
 
 
-// ===============================
-// SCROLL FLUIDO LINK INTERNI
-// ===============================
+// =================================
+// ANNO FOOTER
+// =================================
 
 
-document.querySelectorAll('a[href^="#"]')
-.forEach(link=>{
-
-
-link.addEventListener("click", function(e){
-
-
-const target =
-document.querySelector(
-this.getAttribute("href")
-);
-
-
-if(target){
-
-e.preventDefault();
-
-
-target.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-
-}
-
-
-});
-
-
-});
-
-
-
-
-
-
-
-
-// ===============================
-// ANNO AUTOMATICO FOOTER
-// ===============================
-
-
-const year = document.querySelector(".year");
+const year =
+document.querySelector(".year");
 
 
 if(year){
 
-year.textContent = new Date().getFullYear();
+year.textContent =
+new Date().getFullYear();
 
 }
-
 
 
 });
